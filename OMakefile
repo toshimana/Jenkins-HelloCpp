@@ -1,0 +1,12 @@
+LDFLAGS += -lgtest -lgtest_main -lpthread
+
+FILES[] =
+	Hello
+	HelloTest
+
+TARGET = Hello
+
+Hello:
+	CXXProgram($(TARGET), $(FILES))
+
+.DEFAULT: Hello
