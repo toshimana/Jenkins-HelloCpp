@@ -6,7 +6,9 @@ FILES[] =
 
 TARGET = Hello
 
-Hello:
-	CXXProgram($(TARGET), $(FILES))
+.DEFAULT: $(CXXProgram $(TARGET), $(FILES))
 
-.DEFAULT: Hello
+.PHONY: clean
+
+clean:
+	rm -f *~ *.o *.omc
